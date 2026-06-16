@@ -31,3 +31,7 @@ outputs/
 # Build outputs
 build/
 dist/
+
+# Images intentionally committed for documentation
+!assets/
+!assets/*.png
