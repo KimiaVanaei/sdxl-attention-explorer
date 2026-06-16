@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Generated images and attention maps
+outputs/
+*.png
+*.jpg
+*.jpeg
+
+# Model files
+*.ckpt
+*.safetensors
+*.bin
+
+# IDE and operating system
+.vscode/
+.idea/
+.DS_Store
+
+# Build outputs
+build/
+dist/

@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sdxl-attention-explorer"
+version = "0.1.0"
+description = "Visualize prompt-token cross-attention maps in Stable Diffusion XL."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.1",
+    "diffusers==0.38.0",
+    "transformers>=4.44,<5",
+    "huggingface-hub>=0.34,<2",
+    "accelerate>=0.33",
+    "safetensors>=0.4",
+    "numpy>=1.24",
+    "matplotlib>=3.7",
+    "Pillow>=10",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "ruff>=0.6",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
