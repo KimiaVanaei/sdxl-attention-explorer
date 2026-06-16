@@ -7,9 +7,6 @@ The project intercepts cross-attention inside the SDXL U-Net, connects
 attention columns to readable prompt tokens, aggregates maps across layers and
 spatial resolutions, and produces heatmaps over the generated image.
 
-> Cross-attention maps are interpretability signals. They should not be treated
-> as pixel-perfect segmentation masks or definitive causal explanations.
-
 ## Example output
 
 Given the prompt:
@@ -91,7 +88,7 @@ outputs/example/
 Clone the repository and install it in editable mode:
 
 ```bash
-git clone <YOUR-REPOSITORY-URL>
+git clone https://github.com/KimiaVanaei/sdxl-attention-explorer.git
 cd sdxl-attention-explorer
 pip install -e .
 ```
@@ -108,8 +105,6 @@ The project currently targets:
 * PyTorch 2.1 or newer
 * Diffusers 0.38.0
 * Transformers 4.44 or newer, below version 5
-
-Diffusers is pinned because custom attention processors depend on its processor interface.
 
 ## Hugging Face authentication
 
